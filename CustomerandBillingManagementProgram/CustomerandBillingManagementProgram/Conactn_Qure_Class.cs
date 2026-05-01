@@ -71,7 +71,7 @@ namespace CustomerandBillingManagementProgram
                     connectionPr.Open();
                     connect = new SqlCommand(qur, connectionPr);
                    
-                        //nnect.ExecuteNonQuery();
+                        connect.ExecuteNonQuery();
                 }
                 catch (Exception)
                 {
@@ -81,6 +81,29 @@ namespace CustomerandBillingManagementProgram
                
             }
            
+        }
+        public static void SqlCommand_Fn(string qur,string NameDatabase)
+        {
+
+            {
+                try
+                {
+
+                    connectionPr = new SqlConnection(NameDatabase);
+                    SqlConnection_Close();
+                    connectionPr.Open();
+                    connect = new SqlCommand(qur, connectionPr);
+
+                    connect.ExecuteNonQuery();
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+
+            }
+
         }
         public static void SqlConnection_Close()
         {

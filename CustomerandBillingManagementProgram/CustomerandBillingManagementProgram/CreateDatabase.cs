@@ -9,27 +9,31 @@ namespace CustomerandBillingManagementProgram
 {
     internal class CreateDatabase
     {
-       // public static string NAMEDATABASE = "AlZain_Company_DATA";
+        // public static string NAMEDATABASE = "AlZain_Company_DATA";
         public static string NAME_SERVER = "MOHAMAD";
         public static string User_Name;
         public static string User_Password;
-        public static string NAME_DATABASE = "CUSTOMER_BILING_MANAGEMENT_PROGRAMM";
-        public static string QueueSelectDatabase = $"IF NOT EXISTS(SELECT NAME FROM SYS.DATABASE WHERE NAME={NAME_DATABASE})\t\nBEGIN\t\nSELECT 0 \t\nEND\t\nBEGIN\t\nSELECT 1 \t\nEND";
-        string connection_Master = @"Server=.\"+NAME_SERVER+ ";Database=master;Integrated Security=True;\t\nCREATEDATABASE "+ NAME_DATABASE + ";";
-        public static string  connection = @"Server=.\" + NAME_SERVER + ";Database=" + NAME_DATABASE + ";Integrated Security=True;";
-        public static string connection_User_N_P = @"Server=.\" + NAME_SERVER + ";Database=" + NAME_DATABASE + ";UserName="+User_Name+ ";Password="+User_Password+";";
+        public static string NAME_DATABASE { get; } = "CUSTOMER_BILING_MANAGEMENT_PROGRAM";
+        public static string QueueSelectDatabase = $"IF NOT EXISTS(SELECT NAME FROM SYS.DATABASES\n\t WHERE NAME='{NAME_DATABASE}')\t\nBEGIN\t\nSELECT 0 \t\nEND ELSE\t\nBEGIN\t\nSELECT 1 \t\nEND";
+        string connection_Master = @"Server=.\" + NAME_SERVER + ";Database=master;Integrated Security=True;";
+        public static string connection = @"Server=.\" + NAME_SERVER + ";Database=" + NAME_DATABASE + ";Integrated Security=True;";
+        public static string connection_User_N_P = @"Server=.\" + NAME_SERVER + ";Database=" + NAME_DATABASE + ";UserName=" + User_Name + ";Password=" + User_Password + ";";
         public int CreatconnectioneData()
         {
-            Conactn_Qure_Class.SqlCommand_Fn(QueueSelectDatabase);
-            if (Conactn_Qure_Class.connect.ExecuteScalar().ToString()=="0")
+            Conactn_Qure_Class.SqlCommand_Fn(QueueSelectDatabase, connection_Master);
+            if (Conactn_Qure_Class.connect.ExecuteScalar().ToString() == "0")
             {
+                Conactn_Qure_Class.SqlCommand_Fn($"CREATE DATABASE {NAME_DATABASE};", connection_Master);
+                Conactn_Qure_Class.SqlCommand_Fn(CreteTableProc);
+                CreateNewDataBase();
                 return 0;
             }
-            else if(Conactn_Qure_Class.connect.ExecuteScalar().ToString() == "1")
+            else if (Conactn_Qure_Class.connect.ExecuteScalar().ToString() == "1")
             {
                 CreateNewDataBase();
                 return 1;
             }
+
             else
             {
                 return 2;
@@ -37,21 +41,21 @@ namespace CustomerandBillingManagementProgram
         }
         public int CreateNewDataBase()
         {
-            Conactn_Qure_Class.SqlCommand_Fn(connection_Master);
-            Conactn_Qure_Class.SqlCommand_Fn(connection);
-            Conactn_Qure_Class.SqlCommand_Fn(CreteTableProc);
-            Conactn_Qure_Class.SqlCommand_Fn("EXEC CREATE_TABLE");
+
+            Conactn_Qure_Class.SqlCommand_Fn(CheckTable);
             if (Conactn_Qure_Class.connect.ExecuteScalar().ToString() == "0")
             {
                 return 0;
             }
             else
             {
-                CreateNewDataBase();
+                Conactn_Qure_Class.SqlCommand_Fn("EXEC CREATE_TABLE");
+
                 return 1;
             }
         }
-        private string CreteTableProc=@"CREATE PROC CREATE_TABLE
+
+        private string CreteTableProc { get; } = @"CREATE PROC CREATE_TABLE
 AS
 BEGIN
 CREATE TABLE CUSTMER
@@ -98,6 +102,8 @@ CREATE TABLE InvoiceDetails (
     UnitPrice DECIMAL(10,2) NOT NULL,              -- سعر الوحدة وقت البيع
     Subtotal AS(Quantity * UnitPrice), -- حساب المجموع الفرعي تلقائياً
 );
-END";
+END
+ ";
+        private string CheckTable { get; } = @"IF  EXISTS(SELECT * FROM SYS.tables ) BEGIN SELECT 0  END ELSE BEGIN SELECT 1  END;";
     }
 }
