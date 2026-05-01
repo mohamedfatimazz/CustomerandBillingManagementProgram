@@ -1,0 +1,13 @@
+C:\Users\Mohmmad\Source\Repos\Cashier-programe\perssonId\bin\Debug\perssonId.exe.config
+C:\Users\Mohmmad\Source\Repos\Cashier-programe\perssonId\bin\Debug\perssonId.exe
+C:\Users\Mohmmad\Source\Repos\Cashier-programe\perssonId\bin\Debug\perssonId.pdb
+C:\Users\Mohmmad\Source\Repos\Cashier-programe\perssonId\obj\Debug\Customer_and _billing_management_program.csproj.AssemblyReference.cache
+C:\Users\Mohmmad\Source\Repos\Cashier-programe\perssonId\obj\Debug\perssonId.FormCustmer.resources
+C:\Users\Mohmmad\Source\Repos\Cashier-programe\perssonId\obj\Debug\perssonId.FormProduct.resources
+C:\Users\Mohmmad\Source\Repos\Cashier-programe\perssonId\obj\Debug\perssonId.FormInvoice.resources
+C:\Users\Mohmmad\Source\Repos\Cashier-programe\perssonId\obj\Debug\perssonId.FormShwo.resources
+C:\Users\Mohmmad\Source\Repos\Cashier-programe\perssonId\obj\Debug\perssonId.Properties.Resources.resources
+C:\Users\Mohmmad\Source\Repos\Cashier-programe\perssonId\obj\Debug\Customer_and _billing_management_program.csproj.GenerateResource.cache
+C:\Users\Mohmmad\Source\Repos\Cashier-programe\perssonId\obj\Debug\Customer_and _billing_management_program.csproj.CoreCompileInputs.cache
+C:\Users\Mohmmad\Source\Repos\Cashier-programe\perssonId\obj\Debug\perssonId.exe
+C:\Users\Mohmmad\Source\Repos\Cashier-programe\perssonId\obj\Debug\perssonId.pdb
