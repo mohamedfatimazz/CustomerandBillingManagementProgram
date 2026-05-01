@@ -181,13 +181,13 @@
             this.table_btn_text_Fond.ColumnCount = 3;
             this.table_btn_text_Fond.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.5F));
             this.table_btn_text_Fond.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 241F));
-            this.table_btn_text_Fond.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 228F));
+            this.table_btn_text_Fond.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 230F));
             this.table_btn_text_Fond.Controls.Add(this.btnFondShow_PDT_CTR_IVC, 2, 0);
             this.table_btn_text_Fond.Controls.Add(this.textIdFond_CTR_PDT_IVC, 1, 0);
             this.table_btn_text_Fond.Controls.Add(this.labelOCK_Id_CTR_PDT, 0, 0);
             this.table_btn_text_Fond.Dock = System.Windows.Forms.DockStyle.Fill;
             this.table_btn_text_Fond.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
-            this.table_btn_text_Fond.Location = new System.Drawing.Point(88, 0);
+            this.table_btn_text_Fond.Location = new System.Drawing.Point(87, 0);
             this.table_btn_text_Fond.Margin = new System.Windows.Forms.Padding(0);
             this.table_btn_text_Fond.Name = "table_btn_text_Fond";
             this.table_btn_text_Fond.RowCount = 1;
@@ -207,10 +207,10 @@
             this.btnFondShow_PDT_CTR_IVC.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFondShow_PDT_CTR_IVC.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnFondShow_PDT_CTR_IVC.Font = new System.Drawing.Font("Tahoma", 7F);
-            this.btnFondShow_PDT_CTR_IVC.Location = new System.Drawing.Point(347, 3);
+            this.btnFondShow_PDT_CTR_IVC.Location = new System.Drawing.Point(345, 3);
             this.btnFondShow_PDT_CTR_IVC.Margin = new System.Windows.Forms.Padding(1);
             this.btnFondShow_PDT_CTR_IVC.Name = "btnFondShow_PDT_CTR_IVC";
-            this.btnFondShow_PDT_CTR_IVC.Size = new System.Drawing.Size(226, 25);
+            this.btnFondShow_PDT_CTR_IVC.Size = new System.Drawing.Size(228, 25);
             this.btnFondShow_PDT_CTR_IVC.TabIndex = 118;
             this.btnFondShow_PDT_CTR_IVC.Text = "🔎  Fond";
             this.btnFondShow_PDT_CTR_IVC.UseVisualStyleBackColor = false;
@@ -220,7 +220,7 @@
             // textIdFond_CTR_PDT_IVC
             // 
             this.textIdFond_CTR_PDT_IVC.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textIdFond_CTR_PDT_IVC.Location = new System.Drawing.Point(107, 6);
+            this.textIdFond_CTR_PDT_IVC.Location = new System.Drawing.Point(105, 6);
             this.textIdFond_CTR_PDT_IVC.Margin = new System.Windows.Forms.Padding(4);
             this.textIdFond_CTR_PDT_IVC.Name = "textIdFond_CTR_PDT_IVC";
             this.textIdFond_CTR_PDT_IVC.Size = new System.Drawing.Size(233, 24);
@@ -241,7 +241,7 @@
             this.labelOCK_Id_CTR_PDT.Location = new System.Drawing.Point(2, 2);
             this.labelOCK_Id_CTR_PDT.Margin = new System.Windows.Forms.Padding(0);
             this.labelOCK_Id_CTR_PDT.Name = "labelOCK_Id_CTR_PDT";
-            this.labelOCK_Id_CTR_PDT.Size = new System.Drawing.Size(99, 27);
+            this.labelOCK_Id_CTR_PDT.Size = new System.Drawing.Size(97, 27);
             this.labelOCK_Id_CTR_PDT.TabIndex = 119;
             this.labelOCK_Id_CTR_PDT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.labelOCK_Id_CTR_PDT.UseCompatibleTextRendering = true;
@@ -484,7 +484,7 @@
             this.tableLayoutPanel11.ColumnCount = 3;
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.24278F));
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 86.75722F));
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 332F));
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 333F));
             this.tableLayoutPanel11.Controls.Add(this.table_btn_text_Fond, 1, 0);
             this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel11.Location = new System.Drawing.Point(4, 4);
